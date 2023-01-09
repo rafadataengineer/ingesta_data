@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Conexion a la base de datos MongoDB
 client = MongoClient("mongodb://localhost:27017/")
-db = client("postcodes")
+db = client["postcodes"]
 
 @app.route("/upload", methods=["POST"])
 def upload_csv():
