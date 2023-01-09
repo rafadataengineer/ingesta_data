@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  csv-uploader:
+    build:
+      context: ./csv-uploader
+      dockerfile: Dockerfile
+    depends_on:
+      - mongodb
+    ports:
+      - "5000:5000"
+  processor:
+    build:
+      context: ./processor
+      dockerfile: Dockerfile
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
