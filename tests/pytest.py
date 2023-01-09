@@ -1,4 +1,4 @@
-import PyTest
+import pytest
 from processor import process_coordinates, db, client, API_URL
 
 def test_process_coordinates():
