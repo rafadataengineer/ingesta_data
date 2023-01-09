@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 COPY processor.py .
 
 #Ejecutar la funcion de procesamiento al iniciar el contenedor
-CMD ["python", "-c", "from processor import process_coordinates; process_coordinates()"]
+CMD ["python", "processor.py"]
